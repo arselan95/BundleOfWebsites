@@ -38,30 +38,6 @@ echo <<<_END
 </header>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Services Section -->
-  <div class="w3-container w3-padding-32" id="services">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Services</h3>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-	  <a href="antarctica.php" class="w3-bar-item w3-button">
-        <div class=" w3-center w3-padding w3-black w3-opacity-min">Nature</div>
-        <img src="images/sell.jpg" alt= "Sell" style="width:100%"></a>
-      </div>
-    </div>
-   
-  
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-	  <a href="cartoon.php" class="w3-bar-item w3-button">
-        <div class=" w3-center w3-padding w3-black w3-opacity-min">cartoon</div>
-        <img src="images/sell.jpg" alt= "Sell" style="width:100%"></a>
-      </div>
-    </div>
 
 _END;
 
