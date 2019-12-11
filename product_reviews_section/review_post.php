@@ -31,7 +31,7 @@ SET
     -- user = $user,
     rating=$rating,
     feedback = '$feedback';";
-echo $sql."\n";
+// echo $sql."\n";
 if (!$conn->query($sql))
 {
     die("Error: " . $conn->connect_error);

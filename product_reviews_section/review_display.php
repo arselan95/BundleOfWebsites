@@ -3,6 +3,7 @@
 <!-- $creat_query="CREATE TABLE IF NOT EXISTS product_reviews(id int NOT NULL AUTO_INCREMENT , product_id INT NOT NULL, product_type int, rating FLOAT, feedback varchar(400), PRIMARY KEY (id));" -->
 
 <?php include_once('db_config/database.php');
+include_once('review_styles.css');
 ?>
 
 <?php
@@ -21,21 +22,21 @@ $result = $conn->query($query);
 
 
 if ($result->num_rows > 0) {
-	echo "<table border = '5' class='user_table'><tr>
-	<th>User</th>
-	<th>rating</th>
-	<th>feedbacks</th>
+	echo "<table class = 'review' border = '5' align='center'><tr>
+	<th class = 'review'>User</th>
+	<th class = 'review'>rating</th>
+	<th class = 'review'>feedbacks</th>
 	</tr>";
     while($row = $result->fetch_assoc()) {
-    	echo "<tr>";
-    	echo "<td>". $row['user'] . "</td>";
-    	echo "<td>". $row['rating'] . "</td>";
-    	echo "<td>". $row['feedback'] . "</td>";
+    	echo "<tr class ='review'>";
+    	echo "<td class ='review'>". $row['user'] . "</td>";
+    	echo "<td class ='review'>". $row['rating'] . "</td>";
+    	echo "<td class ='review'>". $row['feedback'] . "</td>";
     	echo "</tr>";
     }
  	echo "</table>";
 } else {
-    echo "0 results";
+    // echo "0 results";
 }
 
 
