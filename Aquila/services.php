@@ -60,12 +60,11 @@ if(isset($_COOKIE['his'])){
     <header>
         <div id="cssmenu" >
             <ul>
-                <li class="active"><a href="index.html"><span>Home</span></a></li>
+                <li class="active"><a href="index.php"><span>Home</span></a></li>
                 <li><a href="about.php"><span>About</span></a></li>
                 <li><a href="services.php"><span>Service</span></a></li>
                 <li><a href="news.php"><span>News</span></a></li>
                 <li><a href="contact.php"><span>Contact</span></a></li>
-                <li class="last"><a href="login.html"><span>Login</span></a></li>
             </ul>
         </div>
 
@@ -76,7 +75,7 @@ if(isset($_COOKIE['his'])){
         <div class="wrap-content">
             <div class="crumbs">
                 <ul>s
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     <li><a href="services.php">Service</a></li>
                 </ul>
             </div>

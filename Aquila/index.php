@@ -49,12 +49,11 @@
 		<header>
 			<div id="cssmenu" >
 				<ul>
-					<li class="active"><a href="index.html"><span>Home</span></a></li>
+					<li class="active"><a href="index.php"><span>Home</span></a></li>
 					<li><a href="about.php"><span>About</span></a></li>
 					<li><a href="services.php"><span>Service</span></a></li>
 					<li><a href="news.php"><span>News</span></a></li>
 					<li><a href="contact.php"><span>Contact</span></a></li>
-					<li class="last"><a href="login.html"><span>Login</span></a></li>
 				</ul>
 			</div>
 			<div class="header-banner zerogrid" style="width: 100%;">
@@ -66,7 +65,7 @@
 						<div class="header-text">
 							<h1>Morbi tristique senectus et</h1>
 							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia.</p>
-							<a class="button button-header" href="index.html">Read More</a>
+							<a class="button button-header" href="index.php">Read More</a>
 						</div>
 					</div>
 				</div>
