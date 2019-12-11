@@ -1,22 +1,22 @@
 <?php
-require_once 'login.php';
-$conn = new mysqli($hn, $un, $pw, $db);
-if ($conn->connect_error) die($conn->connect_error);
-
-require_once('authenticate.php');
-
-$_SESSION["tmpid"]="";
-$tmp= $_SESSION["user"];
-$p= $_SESSION["pass"];
-
-$query = "SELECT id from customer where userName='$tmp' and password='$p'";
-  $result = $conn->query($query);
-  while ($row = $result->fetch_assoc()) {
-      //echo "Welcome ".$tmp." , id: ".$row['id']."<br>";
-      $_SESSION["tmpid"]=$row['id'];
-      }
-  if (!$result) echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
-
+//require_once 'login.php';
+//$conn = new mysqli($hn, $un, $pw, $db);
+//if ($conn->connect_error) die($conn->connect_error);
+//
+//require_once('authenticate.php');
+//
+//$_SESSION["tmpid"]="";
+//$tmp= $_SESSION["user"];
+//$p= $_SESSION["pass"];
+//
+//$query = "SELECT id from customer where userName='$tmp' and password='$p'";
+//  $result = $conn->query($query);
+//  while ($row = $result->fetch_assoc()) {
+//      //echo "Welcome ".$tmp." , id: ".$row['id']."<br>";
+//      $_SESSION["tmpid"]=$row['id'];
+//      }
+//  if (!$result) echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+//
 
 
 echo <<<_END
@@ -121,6 +121,14 @@ echo <<<_END
       </div>
     </div>
 	
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+	  <a href="http://www.cooleboards.com" class="w3-bar-item w3-button">
+        <div class=" w3-center w3-padding w3-black w3-opacity-min">E-Board shop</div>
+        <img src="images/eboard.jpg" alt= "Sell" style="width:100%"></a>
+      </div>
+    </div>
 
 _END;
 
@@ -175,18 +183,18 @@ echo <<<_END
   
 </body>
 _END;
-
- if (isset($_POST['firstName']) && isset($_POST['userName']) &&isset($_POST['password']))
- {
-		$firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
-		$userName = mysqli_real_escape_string($conn, $_POST['userName']);
-		$password = mysqli_real_escape_string($conn, $_POST['password']);
-		$query = "INSERT INTO customer VALUES(NULL,'$firstName','$userName',SHA1('$password'))";
-		$result = $conn->query($query);
-		if (!$result) echo "INSERT failed: $query<br>" . $conn->error . "<br><br>";
-		
-		header("location: loginPage.php");
- }
+//
+// if (isset($_POST['firstName']) && isset($_POST['userName']) &&isset($_POST['password']))
+// {
+//		$firstName = mysqli_real_escape_string($conn, $_POST['firstName']);
+//		$userName = mysqli_real_escape_string($conn, $_POST['userName']);
+//		$password = mysqli_real_escape_string($conn, $_POST['password']);
+//		$query = "INSERT INTO customer VALUES(NULL,'$firstName','$userName',SHA1('$password'))";
+//		$result = $conn->query($query);
+//		if (!$result) echo "INSERT failed: $query<br>" . $conn->error . "<br><br>";
+//
+//		header("location: loginPage.php");
+// }
  
 
 ?>
