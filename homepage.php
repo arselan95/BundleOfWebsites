@@ -1,22 +1,21 @@
 <?php
-//require_once 'login.php';
-//$conn = new mysqli($hn, $un, $pw, $db);
-//if ($conn->connect_error) die($conn->connect_error);
-//
-//require_once('authenticate.php');
-//
-//$_SESSION["tmpid"]="";
-//$tmp= $_SESSION["user"];
-//$p= $_SESSION["pass"];
-//
-//$query = "SELECT id from customer where userName='$tmp' and password='$p'";
-//  $result = $conn->query($query);
-//  while ($row = $result->fetch_assoc()) {
-//      //echo "Welcome ".$tmp." , id: ".$row['id']."<br>";
-//      $_SESSION["tmpid"]=$row['id'];
-//      }
-//  if (!$result) echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
-//
+$conn = mysqli_connect('localhost', 'u502517039_ebup', '123123', 'u502517039_ebup');
+if ($conn->connect_error) die($conn->connect_error);
+
+require_once('authenticate.php');
+
+$_SESSION["tmpid"]="";
+$tmp= $_SESSION["user"];
+$p= $_SESSION["pass"];
+
+$query = "SELECT id from customer where userName='$tmp' and password='$p'";
+ $result = $conn->query($query);
+ while ($row = $result->fetch_assoc()) {
+     //echo "Welcome ".$tmp." , id: ".$row['id']."<br>";
+     $_SESSION["tmpid"]=$row['id'];
+     }
+ if (!$result) echo "SELECT failed: $query<br>" . $conn->error . "<br><br>";
+
 
 
 echo <<<_END
@@ -124,9 +123,18 @@ echo <<<_END
     <div class="w3-row-padding">
     <div class="w3-col l3 m6 w3-margin-bottom">
       <div class="w3-display-container">
-	  <a href="http://www.cooleboards.com" class="w3-bar-item w3-button">
+	  <a href="cooleboards.com" class="w3-bar-item w3-button">
         <div class=" w3-center w3-padding w3-black w3-opacity-min">E-Board shop</div>
         <img src="images/eboard.jpg" alt= "Sell" style="width:100%"></a>
+      </div>
+    </div>
+    
+    <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+	  <a href="aquilazhao.tech" class="w3-bar-item w3-button">
+        <div class=" w3-center w3-padding w3-black w3-opacity-min">Online tutors platform</div>
+        <img src="images/header.jpg" alt= "Sell" style="width:100%"></a>
       </div>
     </div>
 
