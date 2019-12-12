@@ -23,7 +23,7 @@ $creat_query="CREATE TABLE IF NOT EXISTS product_reviews(id int NOT NULL AUTO_IN
 $conn->query($creat_query);
 
 // $feedbacks = nl2br($feedback);
-str_replace('\n',"?",$feedback);
+// str_replace('\n',"?",$feedback);
 $sql = "INSERT INTO product_reviews
 SET
     product_id=$product_id,
