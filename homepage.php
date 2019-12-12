@@ -1,9 +1,9 @@
 <?php
+include_once('product_reviews_section/db_config/database.php');
 $conn = mysqli_connect('localhost', 'u502517039_ebup', '123123', 'u502517039_ebup');
 if ($conn->connect_error) die($conn->connect_error);
 
 require_once('authenticate.php');
-
 $_SESSION["tmpid"]="";
 $tmp= $_SESSION["user"];
 $p= $_SESSION["pass"];
