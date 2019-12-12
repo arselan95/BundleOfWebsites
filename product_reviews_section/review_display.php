@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 
 
 // //create new table if the table is not exists.
-$query="SELECT * FROM product_reviews WHERE product_id =$product_id;";
+$query="SELECT * FROM product_reviews WHERE product_id =$product_id AND product_type = $product_type;";
 $result = $conn->query($query);
 // echo $query."---<br>";
 

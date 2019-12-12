@@ -17,6 +17,7 @@ $product_id = $_POST[product_id];
 $product_type = $_POST[product_type];
 $rating = $_POST[rating];
 $feedback = nl2br($_POST[feedback]);
+$user = $_POST[user];
 
 // //create new table if the table is not exists.
 $creat_query="CREATE TABLE IF NOT EXISTS product_reviews(id int NOT NULL AUTO_INCREMENT ,user varchar(30) DEFAULT 'Anonymous', product_id INT NOT NULL, product_type int, rating FLOAT, feedback TEXT, PRIMARY KEY (id));";
@@ -28,7 +29,7 @@ $sql = "INSERT INTO product_reviews
 SET
     product_id=$product_id,
     product_type=$product_type,
-    -- user = $user,
+    user = '$user',
     rating=$rating,
     feedback = '$feedback';";
 // echo $sql."\n";
