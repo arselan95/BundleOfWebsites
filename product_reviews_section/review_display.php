@@ -23,20 +23,42 @@ $result = $conn->query($query);
 
 if ($result->num_rows > 0) {
 	echo "<table class = 'review' border = '5' align='center'><tr>
+	<th class = 'review'>ID</th>
 	<th class = 'review'>User</th>
 	<th class = 'review'>rating</th>
 	<th class = 'review'>feedbacks</th>
+	<th class = 'review'>Actions</th>
 	</tr>";
     while($row = $result->fetch_assoc()) {
+      $enable = "";
+      if($user == $row['user']){
+        $enable = "enabled";
+      }else{
+        $enable = "disabled";
+
+      }
     	echo "<tr class ='review'>";
+    	echo "<td class ='review'>". $row['id'] . "</td>";
     	echo "<td class ='review'>". $row['user'] . "</td>";
     	echo "<td class ='review'>". $row['rating'] . "</td>";
     	echo "<td class ='review'>". $row['feedback'] . "</td>";
+      echo "<td class ='review'>";
+      echo "<form action='product_reviews_section/delete_review.php' method='post' accept-charset='utf-8'>";
+      echo "<input type='hidden'  name='id' value=".$row['id']. " id='user'>";
+
+      // echo "confirm('sure?');";
+
+      echo "<p><input type='submit' value='Delete' ".$enable." onclick=\"return confirm('Are you sure?')\"></p >";
+
+
+
+      echo "</form>";
+      echo "</td>";
     	echo "</tr>";
     }
  	echo "</table>";
 } else {
-    // echo "0 results";
+
 }
 
 

@@ -15,6 +15,7 @@
         <textarea name="feedback" rows="8" cols="100" >
        </textarea>
         <p><input type="submit" value="Submit Review"></p >
+          <?php if(empty($user))$user = "Anonymous";?>
           <input type="hidden" name="user" value=<?php echo $user; ?> id="user">
           <input type="hidden" name="product_type" value=<?php echo $product_type; ?> id="product_type">
           <input type="hidden" name="product_id" value=<?php echo $product_id; ?> id="product_id">
